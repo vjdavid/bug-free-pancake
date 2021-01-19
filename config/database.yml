@@ -6,14 +6,16 @@ default: &default
 development:
   <<: *default
   database: json_api_resources_development
-  #username: json_api_resources
-  #password:
-  #host: localhost
-  #port: 5432
+  username: <%= Rails.application.credentials.username! %>
+  password: <%= Rails.application.credentials.password! %>
+  host: localhost
+  port: 5432
 
 test:
   <<: *default
   database: json_api_resources_test
+  username: <%= Rails.application.credentials.username! %>
+  password: <%= Rails.application.credentials.password! %>
 
 production:
   <<: *default
