@@ -14,9 +14,9 @@ gem 'jsonapi-resources', '~> 0.10.2'
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry-rails', '~> 0.3.9'
-  gem 'rspec-rails', '~> 3.7'
-  gem 'shoulda-matchers', '~> 3.1'
-  gem 'factory_bot_rails', '~> 4.0'
+  gem 'rspec-rails', '~> 4.0', '>= 4.0.2'
+  gem 'shoulda-matchers', '~> 4.5'
+  gem 'factory_bot_rails', '~> 6.1'
   gem 'faker', '~> 2.15', '>= 2.15.1'
 end
 
