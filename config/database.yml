@@ -16,6 +16,8 @@ test:
   database: json_api_resources_test
   username: <%= Rails.application.credentials.username! %>
   password: <%= Rails.application.credentials.password! %>
+  host: localhost
+  port: 5432
 
 production:
   <<: *default
