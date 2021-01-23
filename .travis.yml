@@ -6,7 +6,8 @@ cache:
 services:
   - postgresql
 before_script:
-  - bundle exec rails db:create
+  - psql -c 'create database json_api_resources_test;' -U postgres
+  - bundle exec rails db:migrate
   - bundle exec rails db:schema:load
 script:
   - bundle exec rspec
